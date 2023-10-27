@@ -1,3 +1,15 @@
 .wrapper {
-    
+}
+
+.wrapper ul > * + * {
+    margin-top: 1rem;
+}
+
+.wrapper ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.wrapper ul li img {
 }

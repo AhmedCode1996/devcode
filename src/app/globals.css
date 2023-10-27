@@ -8,6 +8,22 @@
     #ff7000 -13.95%,
     #e2995f 99.54%
   );
+  --header-bg: rgba(15, 17, 23, 0.5);
+  --dark-100: rgba(0, 0, 0, 1);
+  --dark-200: rgba(15, 17, 23, 1);
+  --dark-300: rgba(21, 24, 33, 1);
+  --dark-400: rgba(33, 39, 52, 1);
+  --dark-500: rgba(63, 67, 84, 1);
+  --gradient: linear-gradient(
+    232deg rgba(23, 28, 35, 0.41) 0%,
+    rgba(19, 22, 28, 0.7) 100%
+  );
+  --primary-900: rgba(255, 255, 255, 1);
+  --primary-850: rgba(253, 253, 253, 1);
+  --primary-800: rgba(244, 246, 248, 1);
+  --primary-700: rgba(220, 227, 241, 1);
+  --primary-500: rgba(123, 142, 200, 1);
+  --primary-400: rgba(133, 142, 173, 1);
 }
 
 .light {
@@ -35,7 +51,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  paddin: 0;
+  padding: 0;
   margin: 0;
 }
 
@@ -44,16 +60,23 @@ body {
   height: 100%;
 }
 
+body {
+  font-family: "Inter", sans-serif;
+}
+
 ul {
   list-style-type: none;
 }
 
-button,input {
+button,
+input {
   font: inherit;
+  outline: none;
+  border: none;
 }
 
 img {
-  width: 100%;
+  /* width: 100%; */
   max-width: 100%;
   display: block;
 }

@@ -1,8 +1,0 @@
-.wrapper {
-  display: grid;
-  grid-template-columns: 266px 1fr 330px;
-}
-
-.wrapper > *:first-child {
-    grid-column: 1 / -1
-}

@@ -1,8 +1,63 @@
 .wrapper {
+  font-family: var(--inter-font);
   padding: 0.5rem;
+  border-right: 1px solid #101012;
+  background: var(--dark-200);
+  backdrop-filter: blur(75px);
+  height: fit-content;
 }
 .wrapper nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.wrapper nav ul li:first-child a {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--primary-900);
+  font-family: var(--grotesk-font);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.wrapper nav ul .globalLogo a p > span {
+  text-transform: capitalize;
+}
+.wrapper nav ul li:first-child a span:nth-child(even) {
+  color: var(--accent-color-1);
+}
+.wrapper nav ul li:nth-child(2) {
+  position: relative;
+  flex-basis: 50%;
+}
+
+.wrapper nav ul li:nth-child(2) img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(50%, 50%);
+}
+
+.wrapper nav ul li:nth-child(2) input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  background: linear-gradient(
+    267deg,
+    rgba(23, 28, 35, 0.41) 10.27%,
+    rgba(19, 22, 28, 0.7) 88.57%
+  );
+  border-radius: 10px;
+  color: var(--primary-900);
+}
+
+.wrapper nav ul li:last-child {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.wrapper nav ul li:last-child > * {
+  flex: 1;
 }
