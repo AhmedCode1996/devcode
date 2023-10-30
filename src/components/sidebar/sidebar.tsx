@@ -1,28 +1,46 @@
-import styles from "./sidebar.module.css";
+"use client";
+import { useId, useState } from "react";
+import { motion } from "framer-motion";
+import styles from "./Sidebar.module.css";
 
 import Image from "next/image";
 import Link from "next/link";
 
-import { SIDEBAR_DATA } from "./../../constants/sidebar";
+import { SIDEBAR_DATA } from "../../constants/sidebar";
 
-function sidebar() {
+function Sidebar() {
+  const [navBackDrop, setNavBackDrop] = useState(0);
+  const layoutId = useId();
   return (
     <aside className={styles.wrapper}>
-      <ul>
+      <ul onMouseLeave={() => setNavBackDrop(1)}>
         {SIDEBAR_DATA.map((item) => (
-          <li key={item.id}>
+          <motion.li
+            onMouseEnter={() => setNavBackDrop(item.id)}
+            key={item.id}
+            style={{ zIndex: navBackDrop === item.id ? 1 : 2 }}
+            layout
+          >
+            {navBackDrop === item.id && (
+              <motion.div
+                className={styles.backdrop}
+                initial={{ borderRadius: 16 }}
+                transition={{ type: "spring", stiffness: 60, damping: 10 }}
+                layoutId={layoutId}
+              />
+            )}
             <Image
-              src={item.icon}
+              src={item.lightIcon}
               width={25}
               height={25}
               alt={`${item.title} icon`}
             />
             <Link href="#">{item.title}</Link>
-          </li>
+          </motion.li>
         ))}
       </ul>
     </aside>
   );
 }
 
-export default sidebar;
+export default Sidebar;

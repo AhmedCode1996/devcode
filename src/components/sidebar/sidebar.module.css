@@ -1,14 +1,39 @@
 .wrapper {
+  font-family: var(--inter-font);
+  padding: 0.5rem;
+  background: var(--dark-200);
+
 }
 
 .wrapper ul > * + * {
-    margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .wrapper ul li {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
+  padding: 1rem;
+  position: relative;
+}
+
+ div.backdrop {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(93deg, #ff7000 -13.95%, #e2995f 99.54%);
+}
+
+/* .wrapper ul li:hover {
+  border-radius: 8px;
+  background: linear-gradient(93deg, #ff7000 -13.95%, #e2995f 99.54%);
+} */
+
+.wrapper ul li a {
+  color: var(--primary-900);
+  font-size: var(--base-size);
+  font-weight: 700;
+  text-transform: capitalize;
 }
 
 .wrapper ul li img {

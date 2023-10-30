@@ -1,4 +1,5 @@
 import Header from "./Header";
-import Sidebar from "./sidebar";
+import Sidebar from "./Sidebar";
+import ToggleMode from './toggleMode'
 
-export { Header, Sidebar };
+export { Header, Sidebar, ToggleMode };

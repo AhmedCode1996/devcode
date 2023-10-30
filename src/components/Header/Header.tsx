@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ToggleMode } from "./../";
 import styles from "./header.module.css";
 import Image from "next/image";
 import { IMAGES } from "./../../constants/images";
@@ -17,9 +18,9 @@ function Header() {
                 height={32}
               />
               <p>
-                <span>wiki</span>
-                <span>dev</span>
-                <span>hub</span>
+                <span>Wiki</span>
+                <span>Dev</span>
+                <span>Hub</span>
               </p>
             </Link>
           </li>
@@ -38,19 +39,14 @@ function Header() {
             />
           </li>
           <li>
-            <p>
-              <Image
-                src="/../../assets/darkMode.svg"
-                width={20}
-                height={20}
-                alt="dark mode icon"
-              />
-            </p>
-            <p>
+            <div>
+              <ToggleMode />
+            </div>
+            <div>
               <SignedIn>
                 <UserButton afterSignOutUrl="/" />
               </SignedIn>
-            </p>
+            </div>
           </li>
         </ul>
       </nav>
