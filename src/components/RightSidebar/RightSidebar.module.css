@@ -1,0 +1,43 @@
+.wrapper {
+  font-family: var(--inter-font);
+  padding: 0.5rem;
+  background: var(--dark-200);
+}
+
+.wrapper ul > * + * {
+  margin-top: 0.5rem;
+}
+
+.wrapper h3 {
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  text-transform: capitalize;
+}
+
+.wrapper ul li {
+  position: relative;
+}
+
+.wrapper ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  /* position: relative; */
+}
+
+.wrapper ul li a p {
+  color: #dce3f1;
+  font-size: var(--sm-base-size);
+  font-weight: 500;
+}
+
+span.backdrop {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(93deg, #0f2027 -13.95%, #203a43 99.54%);
+}

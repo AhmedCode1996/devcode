@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: "Ask developers",
   description: "community for programmers to ask their questions",
   icons: {
-    icon: "./../../public/assets/images/site-logo.svg",
+    icon: "public/assets/images/site-logo.svg",
     
   },
 };

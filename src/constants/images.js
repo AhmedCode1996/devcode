@@ -8,9 +8,8 @@ import communitiesLightIcon from "public/assets/icons/users.svg";
 import askQuestionLightIcon from "public/assets/icons/question.svg";
 import lightMode from 'public/assets/icons/moon.svg'
 import darkMode from 'public/assets/icons/sun.svg'
+import chevronRightIcon from "public/assets/icons/chevron-right.svg";
 
-import sunIcon from 'public/assets/mode/sun.png'
-import moonIcon from 'public/assets/mode/moon.png'
 
 import sunMode from 'public/assets/mode/sunMode.json'
 import moonMode from 'public/assets/mode/moonMode.json'
@@ -29,5 +28,5 @@ export const IMAGES = {
   darkMode,
   sunMode,
   moonMode,
-  sunIcon
+  chevronRightIcon
 };

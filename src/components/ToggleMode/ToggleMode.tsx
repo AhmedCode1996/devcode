@@ -2,8 +2,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styles from "./ToggleMode.module.css";
-// import Image from "next/image";
-import { IMAGES } from "@/constants/images";
 
 function ToggleMode() {
   const [value, setValue] = React.useState(false);

@@ -11,3 +11,6 @@
 .wrapper > *:first-child {
   grid-column: 1 / -1;
 }
+/* .wrapper > *:nth-child(2) {
+  display: none;
+} */
