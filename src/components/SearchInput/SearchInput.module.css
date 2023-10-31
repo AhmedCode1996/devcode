@@ -1,0 +1,27 @@
+.wrapper {
+  position: relative;
+  flex-basis: 50%;
+}
+
+.wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(50%, 50%);
+}
+
+.wrapper input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  background: linear-gradient(
+    267deg,
+    rgba(23, 28, 35, 0.41) 10.27%,
+    rgba(19, 22, 28, 0.7) 88.57%
+  );
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+}
+.wrapper input::placeholder {
+  color: #7b8ec8;
+}

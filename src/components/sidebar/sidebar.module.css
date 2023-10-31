@@ -1,8 +1,9 @@
 .wrapper {
   font-family: var(--inter-font);
-  padding: 40px 8px 0 8px;
   background: var(--dark-200);
-
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 .wrapper ul > * + * {

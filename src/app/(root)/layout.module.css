@@ -6,11 +6,27 @@
 }
 
 .wrapper > * {
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
 }
+.wrapper > * + * {
+  padding-top: 6rem;
+}
+
 .wrapper > *:first-child {
   grid-column: 1 / -1;
 }
-/* .wrapper > *:nth-child(2) {
+
+:is(.sidebarSection, .rightSidebarSection) {
+  height: 100dvh;
+  position: relative;
+  overflow: hidden;
+}
+:is(.sidebarSection, .rightSidebarSection) > * {
+  height: 100%;
+  position: sticky;
+  overflow: auto;
+  padding-top: 1rem;
+}
+:is(.sidebarSection, .rightSidebarSection) > *::-webkit-scrollbar {
   display: none;
-} */
+}

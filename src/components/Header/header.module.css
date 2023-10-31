@@ -3,6 +3,11 @@
   padding: 24px 8px;
   background: var(--dark-200);
   height: fit-content;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 .wrapper nav ul {
   display: flex;

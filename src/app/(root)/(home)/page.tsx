@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import { MainContentHeading } from "@/components";
+import { MainContentHeading, SearchInput } from "@/components";
 
 export default function Home() {
   return (
@@ -9,6 +9,7 @@ export default function Home() {
         href="ask-question"
         hrefTitle="Ask a Question"
       />
+      <SearchInput scope="local" placeholder="search questions..." />
     </main>
   );
 }

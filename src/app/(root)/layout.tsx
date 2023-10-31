@@ -6,9 +6,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <section className={styles.wrapper}>
       <Header />
-      <Sidebar />
+      <div className={styles.sidebarSection}>
+        <Sidebar />
+      </div>
       {children}
-      <RightSidebar />
+      <div className={styles.rightSidebarSection}>
+        <RightSidebar />
+      </div>
     </section>
   );
 };

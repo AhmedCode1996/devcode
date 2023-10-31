@@ -1,9 +1,10 @@
-import Link from "next/link";
-import { ToggleMode } from "./../";
 import styles from "./header.module.css";
+import Link from "next/link";
 import Image from "next/image";
-import { IMAGES } from "./../../constants/images";
 import { SignedIn, UserButton } from "@clerk/nextjs";
+
+import { IMAGES } from "./../../constants/images";
+import { SearchInput, ToggleMode } from "@/components";
 function Header() {
   return (
     <header className={styles.wrapper}>
@@ -25,16 +26,8 @@ function Header() {
             </Link>
           </li>
           <li>
-            <Image
-              src={IMAGES.searchInput}
-              alt="search input icon"
-              width={24}
-              height={24}
-            />
-            <input
-              type="text"
-              name="global-search"
-              id="global-search"
+            <SearchInput
+              scope="global"
               placeholder="Search anything globally"
             />
           </li>

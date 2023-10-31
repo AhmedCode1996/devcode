@@ -24,4 +24,14 @@ export const RIGHT_SIDEBAR_DATA = [
     title:
       "Best practices for data fetching in a Next.js application with Server-Side Rendering (SSR)?",
   },
+  {
+    id: 6,
+    title:
+      "Best practices for data fetching in a Next.js application with Server-Side Rendering (SSR)?",
+  },
+  {
+    id: 7,
+    title:
+      "Best practices for data fetching in a Next.js application with Server-Side Rendering (SSR)?",
+  },
 ];

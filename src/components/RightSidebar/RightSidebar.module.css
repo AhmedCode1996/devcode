@@ -2,7 +2,6 @@
   font-family: var(--inter-font);
   padding: 0.5rem;
   background: var(--dark-200);
-  padding: 40px 8px 0 8px;
 }
 
 .wrapper ul > * + * {
