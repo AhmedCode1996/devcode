@@ -27,7 +27,6 @@
   --sm-base-size: 0.875rem;
   --base-size: 1rem;
   --scale: 1.25;
-  --h6: 
   --h5: calc(var(--base-size) * var(--scale));
   --h4: calc(var(--h5) * var(--scale));
   --h3: calc(var(--h4) * var(--scale));
@@ -71,6 +70,7 @@ body {
 
 body {
   font-family: "Inter", sans-serif;
+  background-color: #0f1117;
 }
 
 ul {

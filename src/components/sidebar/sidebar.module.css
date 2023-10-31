@@ -1,6 +1,6 @@
 .wrapper {
   font-family: var(--inter-font);
-  padding: 0.5rem;
+  padding: 40px 8px 0 8px;
   background: var(--dark-200);
 
 }

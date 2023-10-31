@@ -1,0 +1,21 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrapper h3 {
+  color: white;
+  font-weight: 700;
+  font-size: var(--h3);
+  letter-spacing: -1px;
+  text-transform: capitalize;
+}
+
+.wrapper a {
+    background: linear-gradient(93deg, #FF7000 -13.95%, #E2995F 99.54%);
+    color: white;
+    font-size: var(--base-size);
+    font-weight: 500;
+    padding: 12px 16px;
+    border-radius: 8px;
+}
