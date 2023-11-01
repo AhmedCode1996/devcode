@@ -1,0 +1,33 @@
+.wrapper {
+    position: relative;
+    width: fit-content;
+}
+
+.wrapper::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-image: url("./../../../public/assets/icons/chevron-down.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 100%) scale(1.5);
+}
+
+.wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 1rem 4rem 1rem 1rem;
+  background-color: #0f1117;
+  color: white;
+  font: inherit;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.wrapper option {
+    font: inherit;
+}

@@ -1,5 +1,6 @@
+import { HomePageFilters } from "@/constants/filterData";
 import styles from "./page.module.css";
-import { MainContentHeading, SearchInput } from "@/components";
+import { HomeTags, MainContentHeading, SearchInput, SelectInput } from "@/components";
 
 export default function Home() {
   return (
@@ -10,6 +11,8 @@ export default function Home() {
         hrefTitle="Ask a Question"
       />
       <SearchInput scope="local" placeholder="search questions..." />
+      <SelectInput options={HomePageFilters} name="ask-question" />
+      <HomeTags options={HomePageFilters} />
     </main>
   );
 }
