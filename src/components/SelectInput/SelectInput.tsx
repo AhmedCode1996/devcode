@@ -8,14 +8,14 @@ interface PropTypes {
     name: string;
     value: string;
   }[];
-  name: string;
+  searchInputName: string;
 }
 
-function SelectInput({ options, name }: PropTypes) {
+function SelectInput({ options, searchInputName }: PropTypes) {
   return (
     <div className={styles.wrapper}>
-      <select name={name} id={name}>
-        {options.map((option) => (
+      <select name={searchInputName} id={searchInputName}>
+        {options?.map((option) => (
           <option key={option.id} value={option.value}>
             {option.name}
           </option>

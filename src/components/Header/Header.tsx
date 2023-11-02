@@ -2,7 +2,6 @@ import styles from "./header.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { SignedIn, UserButton } from "@clerk/nextjs";
-
 import { IMAGES } from "./../../constants/images";
 import { SearchInput, ToggleMode } from "@/components";
 function Header() {

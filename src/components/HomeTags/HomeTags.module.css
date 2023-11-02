@@ -23,3 +23,9 @@ button.nonActive {
   background-color: #151821;
   color: #7b8ec8;
 }
+
+@media (max-width: 766px) {
+  .wrapper {
+    display: none;
+  }
+}

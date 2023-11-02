@@ -3,13 +3,20 @@ import { IMAGES } from "@/constants/images";
 import Image from "next/image";
 
 import styles from "./SearchInput.module.css";
+import { SelectInput } from "..";
 
 function SearchInput({
   scope,
   placeholder,
+  options,
+  name: searchInputName
 }: {
   scope: "local" | "global";
   placeholder: string;
+  options: {
+    id: number, name: string, value: string
+  }[];
+  name: string;
 }) {
   return (
     <div className={styles.wrapper}>
@@ -25,6 +32,7 @@ function SearchInput({
         id={`${scope}-search`}
         placeholder={placeholder}
       />
+      <SelectInput options={options} searchInputName={searchInputName} />
     </div>
   );
 }

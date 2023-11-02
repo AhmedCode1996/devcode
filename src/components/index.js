@@ -6,7 +6,10 @@ import MainContentHeading from "./MainContentHeading";
 import SearchInput from "./SearchInput";
 import SelectInput from "./SelectInput";
 import HomeTags from "./HomeTags";
-
+import HomeQuestions from './HomeQuestions'
+import QuestionCard from './QuestionCard'
+import Tags from './Tags'
+import Tag from './tag'
 export {
   Header,
   Sidebar,
@@ -16,4 +19,8 @@ export {
   SearchInput,
   SelectInput,
   HomeTags,
+  HomeQuestions,
+  QuestionCard,
+  Tags,
+  Tag
 };
