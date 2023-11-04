@@ -6,10 +6,11 @@ import MainContentHeading from "./MainContentHeading";
 import SearchInput from "./SearchInput";
 import SelectInput from "./SelectInput";
 import HomeTags from "./HomeTags";
-import HomeQuestions from './HomeQuestions'
-import QuestionCard from './QuestionCard'
-import Tags from './Tags'
-import Tag from './tag'
+import HomeQuestions from "./HomeQuestions";
+import QuestionCard from "./QuestionCard";
+import Tags from "./Tags";
+import Tag from "./tag";
+import SvgIcon from "./SvgIcon";
 export {
   Header,
   Sidebar,
@@ -22,5 +23,6 @@ export {
   HomeQuestions,
   QuestionCard,
   Tags,
-  Tag
+  Tag,
+  SvgIcon,
 };

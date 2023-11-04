@@ -24,14 +24,14 @@
 
 .wrapper .questionDetails {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .questionDetails .leftSide {
   display: flex;
   align-items: center;
-  gap: 8px
+  gap: 8px;
 }
 
 .questionDetails .leftSide .authorTitle {
@@ -47,3 +47,29 @@
   font-weight: 400;
 }
 
+.questionDetails .rightSide {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.questionDetails .rightSide p {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.questionDetails .rightSide p img {
+  stroke: #697c89;
+}
+
+.questionDetails .rightSide p span {
+  color: #f4f6f8;
+  font-size: 12px;
+}
+
+.questionDetails .rightSide p span:nth-child(1) {
+  font-weight: 500;
+}
+.questionDetails .rightSide p span:nth-child(2) {
+  font-weight: 400;
+}

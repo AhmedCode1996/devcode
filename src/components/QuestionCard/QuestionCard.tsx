@@ -30,7 +30,35 @@ function QuestionCard({
           <h3 className={styles.authorTitle}>{authorName}</h3>
           <p className={styles.date}>{`asked ${timeAgo(createdAt)}`}</p>
         </div>
-        <div className={styles.rightSide}></div>
+        <div className={styles.rightSide}>
+          <p className={styles.vote}>
+            <Image
+              src={"/assets/questionCard/thumpup.svg"}
+              width={16}
+              height={16}
+              alt="thumpup vote icon"
+            />
+            <span>{`${upvotes} vote`}</span>
+          </p>
+          <p className={styles.answers}>
+            <Image
+              src={"/assets/questionCard/answer.svg"}
+              width={16}
+              height={16}
+              alt="answer icon"
+            />
+            <span>{`${answers.length} answers`}</span>
+          </p>
+          <p className={styles.views}>
+            <Image
+              src={"/assets/questionCard/view.svg"}
+              width={16}
+              height={16}
+              alt="view icon"
+            />
+            <span>{`${views} views`}</span>
+          </p>
+        </div>
       </div>
     </div>
   );

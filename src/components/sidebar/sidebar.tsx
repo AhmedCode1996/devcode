@@ -23,9 +23,15 @@ function Sidebar() {
           >
             {navBackDrop === item.id && (
               <motion.div
-                className={styles.backdrop}
+                // whileHover={{ rotate: 2 }}
+                // animate={{ rotateX: 180 }}
                 initial={{ borderRadius: 16 }}
-                transition={{ type: "spring", stiffness: 60, damping: 10 }}
+                className={styles.backdrop}
+                transition={{
+                  type: "spring",
+                  stiffness: 60,
+                  damping: 10,
+                }}
                 layoutId={layoutId}
               />
             )}
