@@ -11,6 +11,8 @@ import QuestionCard from "./QuestionCard";
 import Tags from "./Tags";
 import Tag from "./tag";
 import SvgIcon from "./SvgIcon";
+import InputTag from "./InputTag";
+import InputTagsList from "./InputTagsList";
 export {
   Header,
   Sidebar,
@@ -25,4 +27,6 @@ export {
   Tags,
   Tag,
   SvgIcon,
+  InputTag,
+  InputTagsList,
 };

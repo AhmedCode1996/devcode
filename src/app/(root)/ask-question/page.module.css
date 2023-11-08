@@ -43,8 +43,26 @@
   font-size: 16px;
   font-weight: 600;
 }
-.formContainer form p {
+.formContainer form p.notice {
   color: #7b8ec8;
   font-size: 14px;
   font-weight: 400;
+  margin-block: 6px;
+}
+.formContainer form button.submitQuestion {
+  background: linear-gradient(93deg, #ff7000 -13.95%, #e2995f 99.54%);
+  color: white;
+  font-size: var(--base-size);
+  font-weight: 500;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-left: auto;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.inputError {
+  color: #7f1d1d;
+  font-size: 14px;
+  font-weight: 500;
 }
