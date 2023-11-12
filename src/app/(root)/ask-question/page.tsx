@@ -4,12 +4,7 @@ import React, { useRef, useState } from "react";
 
 import { DevTool } from "@hookform/devtools";
 import { Editor } from "@tinymce/tinymce-react";
-import {
-  useForm,
-  Controller,
-  ControllerRenderProps,
-  FieldValues,
-} from "react-hook-form";
+import { useForm, Controller, FieldValues } from "react-hook-form";
 
 import styles from "./page.module.css";
 import {
@@ -18,47 +13,47 @@ import {
 } from "@/constants/questionPluginsAndToolbar";
 import { InputTagsList } from "@/components";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { questionSchema } from "@/validation/questionValidation";
+import {
+  QuestionSchemaTypes,
+  questionSchema,
+} from "@/models/questionValidation";
+import { createQuestion } from "@/lib/actions/questionAction";
 
 const Page = () => {
   const editorRef = useRef<Editor | null>(null);
   const [tagsList, setTagsList] = useState<string[]>([]);
 
-  type IFormInput = {
-    title: string;
-    description: string;
-    questionTags: string[];
-  };
-
   const {
     handleSubmit,
     control,
     formState: { errors, isSubmitting },
-    setValue,
-    getValues,
-    trigger,
     reset,
-  } = useForm<IFormInput>({
+    setValue,
+  } = useForm<QuestionSchemaTypes>({
     defaultValues: {
       title: "",
       description: "",
-      questionTags: [],
+      questionTags: "",
     },
     resolver: zodResolver(questionSchema),
   });
 
-  const handleTagsInput = (
-    e: React.KeyboardEvent<HTMLInputElement>,
-    field: ControllerRenderProps<IFormInput, "questionTags">
-  ) => {
-    if (e.key === "Enter" && field.value) {
-      setTagsList((prev: string[]) => [...prev, field.value as string]);
-      trigger("questionTags");
+  const handleTagsInput = (e: React.KeyboardEvent<HTMLInputElement>, field) => {
+    if (e.key === "Enter" && field.value && !tagsList.includes(field.value)) {
+      const newTagsList = [...tagsList, field.value];
+      setTagsList(newTagsList);
+      setValue("questionTags", "");
+      // setValue("questionTags", newTagsList);
+      // trigger("questionTags");
     }
   };
 
   const onSubmit = async (data: FieldValues) => {
-    reset();
+    try {
+      await createQuestion({});
+      console.log("connection stablished");
+    } catch (error) {}
+    // reset();
   };
 
   return (
@@ -130,7 +125,7 @@ const Page = () => {
             <Controller
               name="questionTags"
               control={control}
-              defaultValue={[]}
+              defaultValue=""
               render={({ field }) => (
                 <input
                   {...field}
@@ -144,6 +139,7 @@ const Page = () => {
                 Add up to 5 tags to describe what your question is about. Start
                 typing to see suggestions.
               </p>
+              <InputTagsList data={tagsList} />
             </div>
             <p className={styles.inputError}>{errors.questionTags?.message}</p>
           </div>

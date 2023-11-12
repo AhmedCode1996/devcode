@@ -7,11 +7,11 @@ function ToggleMode() {
   const [value, setValue] = React.useState(false);
   return (
     <div
-      onClick={() => setValue(!value)}
       style={{ justifyContent: value ? "flex-end" : "flex-start" }}
       className={styles.wrapper}
     >
       <motion.div
+        onClick={() => setValue(!value)}
         initial={false}
         transition={{
           type: "spring",
