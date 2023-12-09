@@ -25,7 +25,6 @@ export const metadata: Metadata = {
   description: "community for programmers to ask their questions",
   icons: {
     icon: "public/assets/images/site-logo.svg",
-    
   },
 };
 
@@ -36,8 +35,10 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en">
-        <body className={`${inter.variable} ${grotesk.variable}`}>
+      <html lang="en" data-theme="night">
+        <body
+          className={`${inter.variable} ${grotesk.variable} bg-accent-content`}
+        >
           <ThemeProvider>{children}</ThemeProvider>
         </body>
       </html>

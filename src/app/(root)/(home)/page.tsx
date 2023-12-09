@@ -8,7 +8,7 @@ import {
 } from "@/components";
 export default function Home() {
   return (
-    <main className={styles.wrapper}>
+    <main className={`${styles.wrapper} bg-slate-950`}>
       <MainContentHeading
         title="all questions"
         href="ask-question"

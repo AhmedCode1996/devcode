@@ -2,7 +2,6 @@ import styles from "./header.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { SignedIn, UserButton } from "@clerk/nextjs";
-import { IMAGES } from "./../../constants/images";
 import { SearchInput, ToggleMode } from "@/components";
 function Header() {
   return (
@@ -12,7 +11,7 @@ function Header() {
           <li className={styles.globalLogo}>
             <Link href={"/"}>
               <Image
-                src={IMAGES.logo}
+                src={"/assets/images/site-logo.svg"}
                 alt="ask developers logo"
                 width={32}
                 height={32}

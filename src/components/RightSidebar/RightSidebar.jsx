@@ -34,7 +34,7 @@ function RightSidebar() {
                 {item.title}
               </p>
               <Image
-                src={IMAGES.chevronRightIcon}
+                src={"/assets/icons/chevron-right.svg"}
                 width={25}
                 height={25}
                 alt={`${item.title} icon`}

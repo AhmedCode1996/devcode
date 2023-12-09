@@ -2,27 +2,27 @@
 import React from "react";
 import styles from "./HomeTags.module.css";
 
-interface PropTypes {
+type PropTypes = {
   options: {
     id: number;
     name: string;
     value: string;
   }[];
-}
+};
 
 function HomeTags({ options }: PropTypes) {
   const [active, setActive] = React.useState("");
 
-  const clickHandler = (value: string) => {
+  const activeClickHandler = (value: string) => {
     setActive(value);
   };
   return (
     <div className={styles.wrapper}>
       {options.map((option) => (
         <button
-          className={active === option.value ? styles.active : styles.nonActive}
           key={option.id}
-          onClick={() => clickHandler(option.value)}
+          onClick={() => activeClickHandler(option.value)}
+          className={`btn ${active === option.value ? "btn-active" : ""}`}
         >
           {option.name}
         </button>

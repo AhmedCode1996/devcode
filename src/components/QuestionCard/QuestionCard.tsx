@@ -38,7 +38,7 @@ function QuestionCard({
               height={16}
               alt="thumpup vote icon"
             />
-            <span>{`${upvotes} vote`}</span>
+            <span className=" text-blue-600">{`${upvotes} vote`}</span>
           </p>
           <p className={styles.answers}>
             <Image

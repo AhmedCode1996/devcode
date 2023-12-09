@@ -1,5 +1,4 @@
 import React from "react";
-import { IMAGES } from "@/constants/images";
 import Image from "next/image";
 
 import styles from "./SearchInput.module.css";
@@ -21,7 +20,7 @@ function SearchInput({
   return (
     <div className={styles.wrapper}>
       <Image
-        src={IMAGES.searchInput}
+        src={"/assets/icons/search.svg"}
         alt="search input icon"
         width={24}
         height={24}

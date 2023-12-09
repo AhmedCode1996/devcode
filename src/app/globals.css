@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --accent-color-1: rgba(255, 112, 0, 1);
   --accent-color-2: rgba(265, 153, 95, 1);
